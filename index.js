@@ -4,7 +4,7 @@ const word_btn = document.querySelector(".word_btn");
 const displaySentence = document.querySelector(".displaySentence")
 
 const wordBtnClicked = () => {
-    const sentences = sentenceElem.value;
+    let sentences = sentenceElem.value;
 //console.log(sentences);
     let word = sentences.split(" ")
 //let word = sentences.split(" ").trim();
@@ -26,7 +26,8 @@ const wordBtnClicked = () => {
     
     
     displaySentence.innerHTML = sentencee;
-   // wordCountElem.innerHTML = sentencee.length
+    //const
+   wordCountElem.innerHTML = word.length;
   
 }
 
