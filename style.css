@@ -1,0 +1,17 @@
+body {
+    background-color: antiquewhite;
+}
+
+.container {
+    margin: 1em;
+    text-align: center;
+    width: 75%;
+}
+
+.word_btn {
+    margin: 0.5em;
+    font: 1em sans-serif;
+    background-color: blue;
+    padding: 0.5em;
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+Words widget
+Create a widget that allows a user to enter a sentence of 5 or more words. When the user clicks a button the sentence should be analyzed.
+
+The widget:
+
+should highlight any word that is longer than 4 characters,
+and show how many words are in the sentence.
+Select a decent color sceme for your widget from coolors.
+
+------------------------------------------------
+
+Hide & highlight
+There should be an option to hide all words shorter than 5 characters. Use a checkbox.
+
+Highlight the longest word/s in the sentence.
+
+-------------------------------------------------------------------------------
+
