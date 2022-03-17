@@ -3,6 +3,7 @@ const wordCountElem = document.querySelector(".wordCount");
 const word_btn = document.querySelector(".word_btn");
 const displaySentence = document.querySelector(".displaySentence")
 const hideWords = document.querySelector(".hideWords")
+const longest_word = document.querySelector(".longest_word")
 
 const wordBtnClicked = () => {
     let sentences = sentenceElem.value;
@@ -30,17 +31,25 @@ const wordBtnClicked = () => {
     wordCountElem.innerHTML = word.length;
 
 
+
+
 hideWords.addEventListener('click', function(){
     let string = " ";
     const longestWord =sentenceElem.value.split(" ");
     for (let i = 0; i < longestWord.length; i++) {
 const longestWords = longestWord[i];
-if(longestWords.length >5){
-    string += "<mark>" + longestWords + "</mark>" + " "
+if (hideWords.checked == true){
+    displaySentence.style.display = "block";
+  } else {
+     displaySentence.style.display = "none";
+  }
+if(longestWords.length >=5){
+    string += `<mark style = 'color :red'>${longestWords}</mark>` + " "
 }
 
     }
-    displaySentence.innerHTML =`display words more than five : ${string}`;
+ displaySentence.innerHTML =`display words that has more than five characters : ${string}`;
+    
 })
 }
 
