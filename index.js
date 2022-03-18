@@ -29,31 +29,33 @@ const wordBtnClicked = () => {
     displaySentence.innerHTML = sentencee;
 
     wordCountElem.innerHTML = word.length;
-
-
+    //let longestWord =word.m
 
 
 hideWords.addEventListener('click', function(){
+
     let string = " ";
     const longestWord =sentenceElem.value.split(" ");
     for (let i = 0; i < longestWord.length; i++) {
 const longestWords = longestWord[i];
+
 if (hideWords.checked == true){
-    displaySentence.style.display = "block";
-  } else {
-     displaySentence.style.display = "none";
+   if(longestWords.length >=5 ){
+    string += `<mark style = 'color :red'>${longestWords}</mark>` + " "; 
+
+}
+displaySentence.innerHTML =`display words that has more than five characters : ${string}`;
+
   }
-if(longestWords.length >=5){
-    string += `<mark style = 'color :red'>${longestWords}</mark>` + " "
-}
+ else{displaySentence.innerHTML = sentencee;
 
-    }
- displaySentence.innerHTML =`display words that has more than five characters : ${string}`;
-    
+ }
+
+    }  
+
+ 
 })
-}
 
+}
 
 word_btn.addEventListener('click', wordBtnClicked)
-
-
