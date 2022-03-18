@@ -29,19 +29,21 @@ const wordBtnClicked = () => {
     displaySentence.innerHTML = sentencee;
 
     wordCountElem.innerHTML = word.length;
-    //let longestWord =word.m
+    
 
 
 hideWords.addEventListener('click', function(){
 
     let string = " ";
+    let longWord = " ";
     const longestWord =sentenceElem.value.split(" ");
     for (let i = 0; i < longestWord.length; i++) {
 const longestWords = longestWord[i];
 
-if (hideWords.checked == true){
-   if(longestWords.length >=5 ){
+if (hideWords.checked === true){
+   if(longestWords.length >5 && longestWords.length>= longWord.length){
     string += `<mark style = 'color :red'>${longestWords}</mark>` + " "; 
+    longWord = longestWords;
 
 }
 displaySentence.innerHTML =`display words that has more than five characters : ${string}`;
@@ -52,7 +54,7 @@ displaySentence.innerHTML =`display words that has more than five characters : $
  }
 
     }  
-
+longest_word.innerHTML = `longestword is displayed here: <mark style = 'color :green'> ${longWord} </mark>`;
  
 })
 

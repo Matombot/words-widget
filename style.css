@@ -19,5 +19,6 @@ body {
 .sentence {
     padding: 0.5em;
     margin: 0.75em;
+    width: 300px;
 
 }
