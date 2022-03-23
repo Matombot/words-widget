@@ -6,6 +6,7 @@ body {
     margin: 1em;
     text-align: center;
     width: 75%;
+    background-image: -moz-element();
 }
 
 .word_btn {
@@ -21,4 +22,9 @@ body {
     margin: 0.75em;
     width: 300px;
 
+}
+.last5Words {
+    padding-left: 0.5em;
+    box-sizing: content-box;
+    margin: 0.5px;
 }
