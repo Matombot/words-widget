@@ -17,11 +17,11 @@ const wordBtnClicked = () => {
     let Words = word.map(words => {
         if (words.length >= 4) {
             words = `<mark>${words}</mark>`;
-           
+
 
         }
         return words;
-        
+
     })
 
     let sentencee = ""
@@ -36,40 +36,39 @@ const wordBtnClicked = () => {
 
 
 
-    hideWords.addEventListener('click', function () {
-var x = longestword(sentenceElem.value);
-console.log(x);
+    const lessthan = hideWords.addEventListener('click', function () {
+        var x = longestword(sentenceElem.value);
+        console.log(x);
         let string = " ";
         const longestWord = sentenceElem.value.split(" ");
         for (let i = 0; i < longestWord.length; i++) {
             const longestWords = longestWord[i];
 
-            if (hideWords.checked === true) {
-                if (longestWords.length >= x.length && longestWords.length >= 5 ){
-                   string += `<mark style = 'color :green'> ${longestWords} </mark>` + " ";
+            
+                if (longestWords.length >= x.length && longestWords.length >= 5) {
+                    string += `<mark style = 'color :green'> ${longestWords} </mark> `
                 }
-                else if (longestWords.length >= 5 ) {
-                    string += `<mark style = 'color :red'>${longestWords}</mark>` + " ";
-                    
+                else if (longestWords.length >= 5) {
+                    string += `<mark style = 'background-color :red'>${longestWords}</mark> `;
+
                 }
-                
+                if (hideWords.checked === false && longestWords.length < 5 ) { 
+                    string += longestWords + " "
 
             }
 
 
-           else {
-                displaySentence.innerHTML = sentencee;
-
-           }
             
 
+
         }
+        console.log(lessthan);
         displaySentence.innerHTML = `hide all words shorter than 5 characters : ${string}`;
-               // longest_word.innerHTML = `longestword is displayed here: `;
+        // longest_word.innerHTML = `longestword is displayed here: `;
 
     })
 
-    
+
     //last 5 sentence
     //..i have to store input in an empty array and push it to something
 
@@ -79,15 +78,15 @@ console.log(x);
     //console.log(lastWords);
     //displaylastWords.innerHTML = `${lastWords}`
 }
-const longestword =(word) =>{
-    
+const longestword = (word) => {
+
     const longWord = word.split(" ");
     let longWords = " ";
-    for(var i=0;i<longWord.length;i++){
-        if (longWord[i].length >= longWords.length){
-            longWords =longWord[i];
+    for (var i = 0; i < longWord.length; i++) {
+        if (longWord[i].length >= longWords.length) {
+            longWords = longWord[i];
         }
-        
+
     }
     return longWords;
 }
